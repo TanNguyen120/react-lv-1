@@ -44,6 +44,14 @@
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.carousel {
+  margin: 1.5rem;
+}
+
+.row1Home {
+  border-bottom: 1px solid white;
+}
+
 #carouselImg {
   width: 100px;
   height: 550px;

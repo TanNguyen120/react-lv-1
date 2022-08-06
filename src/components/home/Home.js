@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { Container, Row, Col, Accordion, Badge, Carousel } from 'react-bootstrap';
-import { FaCat } from 'react-icons/fa';
+import { FaCat, FaDog } from 'react-icons/fa';
 import './home.css';
 const Home = () => {
     const [catFacts, setCatFact] = useState([]);
@@ -18,7 +18,7 @@ const Home = () => {
     }, []);
     return (
         <Container className='homeContainer'>
-            <Row>
+            <Row className='row1Home'>
                 <Col sm={4} className='componentTile'> <h3> Some Cat Facts <FaCat /></h3>
                     <Accordion defaultActiveKey="0" className='accordion'>
                         {catFacts.map((catFact, index) => {
@@ -34,9 +34,9 @@ const Home = () => {
                         })}
                     </Accordion>
                 </Col>
-                <Col sm={8}>
-                    <h3 className='ComponentTile'>Dog Img For Your Souls</h3>
-                    <Carousel>
+                <Col sm={8} className='ComponentTile'>
+                    <h3 >Dog Img For Your Souls <FaDog /></h3>
+                    <Carousel className='carousel'>
                         {coffeeImage.map((coffeeImg, index) => {
                             return (
                                 <Carousel.Item key={index}>
