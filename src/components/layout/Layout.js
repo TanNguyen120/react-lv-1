@@ -11,6 +11,10 @@ import './layout.css';
 const Layout = () => {
     const [search, setSearch] = useState('');
     console.log("rerender ", search);
+    // useEffect là một hook của react 
+    // useEffect nhận vào 2 tham số: 1. function 2. array
+    // nếu ta chỉ truyền vào 1 tham số là function thì nó sẽ chạy MỖI KHI COMPONENT RERENDER (component sễ rerender khi state của nó có thay đổi)
+    // nếu ta truyền vào đối số thứ 2 thì use effect CHỈ CHẠY 1 LẦN khi component được mount 
     useEffect(() => {
         if (search === '') {
             document.title = "React App";
@@ -18,7 +22,7 @@ const Layout = () => {
             document.title = `p=${search}`;
         }
 
-    })
+    });
     const searchHandler = (e) => {
         setSearch(e.target.value);
     }
@@ -30,7 +34,7 @@ const Layout = () => {
             <Container>
                 <Navbar.Brand href="#home">React-1  <FaReact /></Navbar.Brand>
                 <Nav className="me-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
+                    <Nav.Link href="/">Home</Nav.Link>
                     <Nav.Link href="#features">Boring Stuff</Nav.Link>
                     <Nav.Link href="#pricing">News</Nav.Link>
                 </Nav>
