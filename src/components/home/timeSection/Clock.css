@@ -1,0 +1,16 @@
+@import url('http://fonts.cdnfonts.com/css/ds-digital');
+
+.clock {
+  font-size: 10em;
+  font-family: 'DS-Digital', sans-serif;
+  background-color: rgb(32, 22, 22);
+  color: rgb(0, 145, 43);
+  justify-content: center;
+}
+
+.date {
+  font-size: 1.5em;
+  font-family: 'DS-Digital', sans-serif;
+  background-color: rgb(32, 22, 22);
+  color: rgb(0, 145, 43);
+}
