@@ -13,4 +13,5 @@
   font-family: 'DS-Digital', sans-serif;
   background-color: rgb(32, 22, 22);
   color: rgb(0, 145, 43);
+  border-bottom: 1px dotted rgb(0, 145, 43);
 }
