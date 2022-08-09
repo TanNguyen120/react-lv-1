@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Row, Col, Navbar, Nav, Container, Form, Button } from 'react-bootstrap';
+import { Navbar, Nav, Container, Form, Button } from 'react-bootstrap';
 import { FaReact } from 'react-icons/fa';
 import { GoSearch } from 'react-icons/go';
 import './layout.css';

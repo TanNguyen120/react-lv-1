@@ -1,9 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
 import Layout from './components/layout/';
 import Home from './components/home/';
+import Footer from './components/footer/';
 
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
           <Route path="/" exact element={<Home />} />
         </Routes>
       </BrowserRouter>
+      <Footer />
     </>
   );
 }

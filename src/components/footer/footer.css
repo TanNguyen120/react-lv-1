@@ -1,0 +1,10 @@
+.footer {
+  background-color: #0d0733;
+  color: white;
+  padding: 2rem;
+}
+
+.footerCol {
+  padding: 2rem;
+  border-right: white 1px solid;
+}
