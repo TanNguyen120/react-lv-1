@@ -7,7 +7,6 @@ import Clock from './timeSection';
 const Home = () => {
     const [catFacts, setCatFact] = useState([]);
     const [coffeeImage, setCoffeeImage] = useState([]);
-    const [loading, setLoading] = useState(true);
     useEffect(() => {
         setLoading(true);
         fetch('https://catfact.ninja/facts?limit=5').then(res => res.json()).then(data => setCatFact(data.data));
@@ -45,6 +44,7 @@ const Home = () => {
                                         className="d-block w-100"
                                         id='carouselImg'
                                         src={coffeeImg.message}
+                                        alt='dogImg'
                                     />
                                 </Carousel.Item>
                             )
