@@ -1,0 +1,24 @@
+.homeContainer {
+  background-color: rgb(46, 46, 92);
+  color: white;
+  padding-top: 2rem;
+}
+
+.holidayCard {
+  background-color: rgb(44, 22, 58);
+  color: white;
+  margin: 1.2rem;
+  padding: 1.5rem;
+  border-radius: 5%;
+  height: 13rem;
+}
+
+.holidayRow {
+  margin: 1.5rem;
+  padding: 1.1rem;
+}
+
+.formSelect {
+  background-color: rgb(50, 42, 58);
+  color: white;
+}

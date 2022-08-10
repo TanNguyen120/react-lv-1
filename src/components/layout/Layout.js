@@ -32,10 +32,10 @@ const Layout = () => {
     return (
         <Navbar variant='dark' className="header" >
             <Container>
-                <Navbar.Brand href="#home">React-1  <FaReact /></Navbar.Brand>
+                <Navbar.Brand href="/">React-1  <FaReact /></Navbar.Brand>
                 <Nav className="me-auto">
                     <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="#features">Boring Stuff</Nav.Link>
+                    <Nav.Link href="/holiday">Important Day</Nav.Link>
                     <Nav.Link href="#pricing">News</Nav.Link>
                 </Nav>
                 <Form className="d-flex">

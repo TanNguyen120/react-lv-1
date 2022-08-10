@@ -4,6 +4,7 @@ import './App.css';
 import Layout from './components/layout/';
 import Home from './components/home/';
 import Footer from './components/footer/';
+import Holiday from './components/holiday';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" exact element={<Home />} />
+          <Route path="/holiday" element={<Holiday />} />
         </Routes>
       </BrowserRouter>
       <Footer />

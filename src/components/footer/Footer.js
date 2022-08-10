@@ -7,8 +7,10 @@ const Footer = () => {
     return (
         <Row className="footer">
             <Col className='footerCol'>
-                <div>Harmon</div>
+                <h3>Harmon</h3>
                 <img src={"/aot-logo.jpg"} alt={'logo'} width="150" height="150" />
+                <img src={"/lawLogo.png"} alt={'logo'} width="150" height="150" />
+                <img src={"/swordLogo.png"} alt={'logo'} width="150" height="150" />
             </Col>
             <Col className='footerCol'>
                 <h3>Contact</h3>
@@ -22,7 +24,6 @@ const Footer = () => {
                 <h3>About</h3>
                 <div>This is a website for EDUCATION PURPOSE</div>
                 <div>DISCLAIMER: Any things show in this website is purely for education purpose and not use for any order purpose</div>
-
             </Col>
         </Row>
     )
