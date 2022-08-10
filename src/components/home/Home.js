@@ -8,12 +8,10 @@ const Home = () => {
     const [catFacts, setCatFact] = useState([]);
     const [coffeeImage, setCoffeeImage] = useState([]);
     useEffect(() => {
-        setLoading(true);
         fetch('https://catfact.ninja/facts?limit=5').then(res => res.json()).then(data => setCatFact(data.data));
         for (let i = 0; i < 3; i++) {
             fetch('https://dog.ceo/api/breeds/image/random').then(res => res.json()).then(data => setCoffeeImage(coffeeImage => [...coffeeImage, data]));
         }
-        setLoading(false);
 
     }, []);
     return (
