@@ -36,7 +36,7 @@ const Layout = () => {
                 <Nav className="me-auto">
                     <Nav.Link href="/">Home</Nav.Link>
                     <Nav.Link href="/holiday">Important Day</Nav.Link>
-                    <Nav.Link href="#pricing">News</Nav.Link>
+                    <Nav.Link href="/news">News</Nav.Link>
                 </Nav>
                 <Form className="d-flex">
                     <Form.Control
