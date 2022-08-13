@@ -10,7 +10,6 @@ import './layout.css';
 
 const Layout = () => {
     const [search, setSearch] = useState('');
-    console.log("rerender ", search);
     // useEffect là một hook của react 
     // useEffect nhận vào 2 tham số: 1. function 2. array
     // nếu ta chỉ truyền vào 1 tham số là function thì nó sẽ chạy MỖI KHI COMPONENT RERENDER (component sễ rerender khi state của nó có thay đổi)

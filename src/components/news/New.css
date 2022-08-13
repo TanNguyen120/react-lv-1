@@ -1,0 +1,13 @@
+.newSection {
+  padding: 10px;
+  margin: 10px;
+  background-color: #18124b;
+  color: #fff;
+  border-bottom: rgb(151, 159, 172) solid 1px;
+  padding-bottom: 1.4rem;
+}
+
+.loadTile {
+  background-color: #18124b;
+  color: #fff;
+}
