@@ -3,8 +3,13 @@ import { Col, Row, Badge } from 'react-bootstrap';
 import "./New.css";
 
 const NewElement = ({ rnew }) => {
+
+    const toOriginalLink = () => {
+        alert("Original Link");
+        window.open(rnew.url, "_blank");
+    }
     return (
-        <Row className='newElement'>
+        <Row className='newElement' onClick={() => toOriginalLink()}>
             <Col sm={7}>
                 <h6>{rnew.title}</h6>
                 <p>{rnew.content}</p>
