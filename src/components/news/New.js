@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Row, Col, Container } from 'react-bootstrap';
+import { Row, Col, Container, ListGroup } from 'react-bootstrap';
+import { FaRegNewspaper } from 'react-icons/fa';
 
 import LoadingSpinner from "../spinnerLoad";
 import FistHeadline from './FistHeadline';
@@ -10,10 +11,35 @@ import './New.css';
 
 const New = () => {
     const [news, setNews] = useState([]);
-    useEffect(() => {
-        fetch('https://inshorts.deta.dev/news?category=all').then(res => res.json()).then(data => { setNews(data.data) });
+    // current selected category
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const category = [
+        'national',
+        'business',
+        'sports',
+        'world',
+        'politics',
+        'technology',
+        'startup',
+        'entertainment',
+        'miscellaneous',
+        'hatke',
+        'science',
+        'automobile'];
 
-    }, []);
+
+    useEffect(() => {
+        fetch(`https://inshorts.deta.dev/news?category=${selectedCategory}`).then(res => res.json()).then(data => { setNews(data.data) });
+
+    }, [selectedCategory]);
+
+    // function to change the selected category
+    const handleCategoryChange = (e) => {
+        // we also need to clear the news array
+        setNews([]);
+        setSelectedCategory(e.target.textContent);
+    }
+
     if (news.length === 0) {
         return (
             <Row className='justify-content-md-center'>
@@ -27,14 +53,30 @@ const New = () => {
     } else {
         return (
             <Container>
-                <Row>
-                    <FistHeadline hl={news.shift()} key="headLIne" />
+                <Row className='newSection'>
+                    <Col sm={9} className='headLine'>
+                        <h3>{selectedCategory} News <FaRegNewspaper /> </h3>
+                        <FistHeadline hl={news.shift()} key="headLIne" />
+                    </Col>
+                    <Col sm={3}>
+                        <h3>Category</h3>
+                        <ListGroup>
+                            {category.map((cat, index) => {
+                                return (
+                                    <ListGroup.Item key={index} className="catListItem" onClick={e => handleCategoryChange(e)}>{cat}</ListGroup.Item>
+                                )
+                            })}
+                        </ListGroup>
+
+                    </Col>
                 </Row>
                 <Row>
-                    {news.map(rnew => <Col xm={6}><NewElement rnew={rnew} key={rnew.id} /> </Col>)}
+                    <Col sm={9}>
+                        {news.map(rnew => <NewElement rnew={rnew} key={rnew.id} />)}
+
+                    </Col>
                 </Row>
             </Container>
-
         )
     }
 }

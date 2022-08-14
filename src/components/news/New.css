@@ -1,6 +1,5 @@
 .newSection {
-  padding: 10px;
-  margin: 10px;
+  padding: 10px 0;
   background-color: #18124b;
   color: #fff;
   border-bottom: rgb(151, 159, 172) solid 1px;
@@ -10,4 +9,45 @@
 .loadTile {
   background-color: #18124b;
   color: #fff;
+}
+
+.newElement {
+  background-color: #292452;
+  color: #fff;
+  padding: 1.1rem 0;
+  border-bottom: rgb(151, 159, 172) dashed 0.5px;
+}
+
+.newElement:hover {
+  background-color: #777397;
+  color: #fff;
+  cursor: pointer;
+}
+
+.newElement p {
+  font-size: small;
+  color: rgb(183, 184, 189);
+}
+
+.headLine {
+  border-right: rgb(151, 159, 172) solid 0.5px;
+  padding-right: 2rem;
+}
+
+.catListItem {
+  background-color: #362f75;
+  color: #fff;
+  border: #18124b;
+}
+
+.catListItem:hover {
+  background-color: #777397;
+  color: #fff;
+  cursor: pointer;
+}
+
+.headLineNews {
+  margin-top: 1.2rem;
+  border-top: rgb(151, 159, 172) solid 1px;
+  padding-top: 1.2rem;
 }

@@ -4,14 +4,14 @@ import "./New.css";
 
 const FistHeadline = ({ hl }) => {
     return (
-        <Row className='newSection'>
-            <Col sm={4}>
+        <Row className='headLineNews'>
+            <Col sm={7}>
                 <h4>{hl.title}</h4>
                 <p>{hl.content}</p>
                 <Badge bg="secondary">{hl.date} - {hl.time}</Badge> By {hl.author}
             </Col>
-            <Col sm={4}>
-                <img src={hl.imageUrl} alt='newsImg' />
+            <Col sm={5}>
+                <img src={hl.imageUrl} alt='newsImg' width={"400"} height={"400"} />
             </Col>
         </Row>
     )
