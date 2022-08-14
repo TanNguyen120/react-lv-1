@@ -14,10 +14,14 @@ const Footer = () => {
             </Col>
             <Col className='footerCol'>
                 <h3>Contact</h3>
-                <div> <AiOutlineYoutube /> youtube.com/taan</div>
+                <div> <AiOutlineYoutube onClick={() => {
+                    window.open('https://www.youtube.com/channel/UCqjNzF4ZBohMUWUtLBfjNzg', '_blank');
+                }} /> youtube.com/taan</div>
                 <div> <AiOutlinePhone /> 098-xxx-xxx</div>
                 <div> <AiOutlineMail /> tanguyen1220@gmail.com</div>
-                <div> <AiFillGithub /> github.com/tanguyen120</div>
+                <div> <AiFillGithub onClick={() => {
+                    window.open('https://github.com/TanNguyen120', '_blank');
+                }} /> github.com/tanguyen120</div>
                 {/* <Link to="/borring-stuff">Stuff to do</Link> */}
             </Col>
             <Col className='footerCol'>

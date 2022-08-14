@@ -8,3 +8,7 @@
   padding: 2rem;
   border-right: white 1px solid;
 }
+
+.footerCol div:hover {
+  cursor: pointer;
+}
